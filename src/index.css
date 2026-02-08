@@ -1,15 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary-green: #004d40;
-  /* Darker green for banner background */
-  --accent-green: #005a42;
-  /* Teal green from the image */
-  --accent-orange: #ff7f50;
-  /* The orange/coral color in the navbar */
-  --text-dark: #333333;
+  --primary-logo: #8c7d70;
+  /* Muted brown/taupe */
+  --secondary-logo: #929e8d;
+  /* Sage green */
+  --accent-logo: #d9c5b2;
+  /* Warm sand/beige */
+  --dark-logo: #3d3028;
+  /* Deep espresso brown */
+  --light-logo: #f1efeb;
+  /* Off-white background */
+
+  /* Mapping old variables to new ones for compatibility */
+  --primary-green: var(--dark-logo);
+  --accent-green: var(--primary-logo);
+  --accent-orange: var(--secondary-logo);
+  --text-dark: var(--dark-logo);
   --text-white: #ffffff;
-  --bg-light: #ffffff;
+  --bg-light: var(--light-logo);
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -105,7 +114,7 @@ ul {
 }
 
 .nav-links li a {
-  color: #333;
+  color: var(--dark-logo);
   font-weight: 500;
   font-size: 15px;
   transition: var(--transition);
@@ -113,7 +122,7 @@ ul {
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: var(--accent-orange);
+  color: var(--primary-logo);
 }
 
 .dropdown-trigger {
@@ -188,7 +197,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 20% 50%, rgba(0, 77, 64, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background: radial-gradient(circle at 20% 50%, rgba(61, 48, 40, 0.5) 0%, rgba(61, 48, 40, 0.2) 100%);
 }
 
 .hero-content {
@@ -225,18 +234,21 @@ ul {
 .btn-primary {
   display: inline-block;
   background-color: #fff;
-  color: var(--accent-green);
+  color: var(--dark-logo);
   padding: 16px 36px;
   font-weight: 600;
   font-size: 15px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-green);
+  background-color: var(--primary-logo);
   color: #fff;
+  transform: translateY(-2px);
 }
 
 /* Support Section */
@@ -362,7 +374,7 @@ ul {
 
 /* Expectations Section */
 .expectations-section {
-  background-color: var(--accent-green);
+  background-color: var(--primary-logo);
   color: #fff;
   padding: 80px 0 120px;
   text-align: center;
@@ -404,7 +416,7 @@ ul {
 .icon-box {
   width: 50px;
   height: 50px;
-  background-color: var(--accent-orange);
+  background-color: var(--secondary-logo);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -800,20 +812,20 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border: 1px solid rgba(0, 77, 64, 0.08);
+  border: 1px solid rgba(61, 48, 40, 0.08);
 }
 
 .text-card h3 {
   font-size: 19px;
   margin-bottom: 20px;
-  color: var(--primary-green);
+  color: var(--dark-logo);
   font-weight: 700;
   line-height: 1.3;
 }
 
 .text-card p {
   font-size: 14.5px;
-  color: #555;
+  color: #5d544f;
   line-height: 1.7;
   margin: 0;
 }
@@ -831,10 +843,10 @@ ul {
   display: flex;
   flex-direction: column;
   position: relative;
-  background: linear-gradient(135deg, var(--accent-green) 0%, var(--primary-green) 100%);
+  background: linear-gradient(135deg, var(--secondary-logo) 0%, var(--primary-logo) 100%);
   padding: 50px !important;
   border-radius: 24px;
-  box-shadow: 0 20px 40px rgba(0, 77, 64, 0.15);
+  box-shadow: 0 20px 40px rgba(140, 125, 112, 0.25);
   overflow: hidden;
   color: #fff;
 }
@@ -855,7 +867,7 @@ ul {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 30px;
-  color: var(--accent-orange);
+  color: #fff;
   position: relative;
   z-index: 2;
 }
@@ -878,7 +890,7 @@ ul {
   padding: 25px;
   background: rgba(0, 0, 0, 0.1);
   border-radius: 16px;
-  border-left: 4px solid var(--accent-orange);
+  border-left: 4px solid var(--accent-logo);
   list-style: none;
 }
 
@@ -894,7 +906,7 @@ ul {
   content: '✓';
   position: absolute;
   left: 0;
-  color: var(--accent-orange);
+  color: var(--accent-logo);
   font-weight: 900;
 }
 
@@ -1380,8 +1392,8 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 77, 64, 0.85);
-  /* Teal overlay */
+  background: rgba(61, 48, 40, 0.85);
+  /* Dark brown overlay */
 }
 
 .contact-container {
@@ -1399,7 +1411,7 @@ ul {
   display: block;
   font-size: 14px;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent-logo);
   letter-spacing: 2px;
   margin-bottom: 15px;
 }
@@ -1426,8 +1438,7 @@ ul {
 
 .contact-info-side {
   flex: 0.8;
-  background-color: #f8fcfb;
-  /* Very light teal/gray */
+  background-color: var(--light-logo);
   padding: 60px;
   border-left: 1px solid #eee;
 }
@@ -1475,7 +1486,7 @@ ul {
 .btn-send {
   align-self: flex-start;
   padding: 12px 40px;
-  background-color: var(--accent-green);
+  background-color: var(--primary-logo);
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -1637,7 +1648,7 @@ ul {
 
 /* Footer Section */
 .footer {
-  background-color: var(--primary-green);
+  background-color: var(--dark-logo);
   color: #fff;
   padding: 80px 0 30px;
 }
@@ -1677,7 +1688,7 @@ ul {
 .footer-heading {
   font-size: 13px;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent-logo);
   margin-bottom: 25px;
   letter-spacing: 1px;
 }
@@ -1740,7 +1751,7 @@ ul {
 }
 
 .btn-contact {
-  background-color: var(--accent-orange);
+  background-color: var(--primary-logo);
   color: #fff;
   border: none;
   padding: 15px 30px;
@@ -1752,7 +1763,7 @@ ul {
 }
 
 .btn-contact:hover {
-  background-color: #e67340;
+  background-color: var(--secondary-logo);
 }
 
 .footer-bottom {
@@ -1997,7 +2008,7 @@ ul {
 .mission-subtitle {
   font-size: 13px;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--accent-logo);
   margin-bottom: 15px;
   letter-spacing: 1px;
 }
@@ -2019,7 +2030,7 @@ ul {
 .parcours-title {
   font-size: 24px;
   font-weight: 700;
-  color: var(--accent-orange);
+  color: var(--primary-logo);
   margin-bottom: 50px;
 }
 
@@ -2038,7 +2049,7 @@ ul {
 .parcours-icon {
   width: 60px;
   height: 60px;
-  background-color: var(--accent-orange);
+  background-color: var(--primary-logo);
   border-radius: 12px;
   display: flex;
   align-items: center;

@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../assets/seaboat.jpg';
+import background from '../assets/seaboat1.jpg';
 
 const Hero: React.FC = () => {
     return (
