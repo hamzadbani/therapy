@@ -1,0 +1,53 @@
+import React from 'react';
+import imgLarge from '../assets/authentic-scene-young-person-undergoing-psychological-therapy.jpg';
+import imgTopRight from '../assets/medium-shot-couple-therapy.jpg';
+import imgBottomRight from '../assets/close-up-girl-therapy-session-with-parents.jpg';
+
+const SupportSection: React.FC = () => {
+    return (
+        <section className="support-section">
+            <div className="container support-container">
+                <div className="support-text">
+                    <h2 className="support-title">Nous sommes là pour vous aider</h2>
+                    <p className="support-description">
+                        Avez-vous déjà ressenti un profond découragement face à vos difficultés,
+                        une incertitude quant à vos prochaines étapes, et une anxiété quant à
+                        votre capacité à affronter les défis à venir ? Vous n'êtes pas seul(e).
+                    </p>
+                    <p className="support-list-intro">
+                        À travers le monde, de nombreuses personnes souffrent de :
+                    </p>
+                    <ul className="support-list">
+                        <li>Dépression</li>
+                        <li>Pression pour répondre aux attentes des autres</li>
+                        <li>Épuisement professionnel (burnout)</li>
+                        <li>Incertitude professionnelle</li>
+                        <li>Problèmes relationnels</li>
+                        <li>Difficultés scolaires</li>
+                        <li>Déséquilibre entre vie professionnelle et personnelle</li>
+                        <li>Anxiété liée à la santé</li>
+                        <li>Manque de sens ou de direction</li>
+                        <li>Sentiment de déconnexion avec les proches</li>
+                        <li>Anxiété liée aux études</li>
+                    </ul>
+                </div>
+
+                <div className="support-images">
+                    <div className="image-large">
+                        <img src={imgLarge} alt="Séance de thérapie individuelle" />
+                    </div>
+                    <div className="image-stack">
+                        <div className="image-small">
+                            <img src={imgTopRight} alt="Thérapie de couple" />
+                        </div>
+                        <div className="image-small">
+                            <img src={imgBottomRight} alt="Thérapie familiale" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default SupportSection;
